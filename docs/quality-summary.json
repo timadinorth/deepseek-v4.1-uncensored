@@ -1,0 +1,88 @@
+{
+  "n": 90,
+  "dataset_sha256": "a26939a0dcfd760cd115a1774801319889c458ac55a799f17d1fe007e834218d",
+  "protocol": {
+    "target_mode": "thinking",
+    "reasoning_effort": 75,
+    "temperature": 0,
+    "max_tokens": 16384,
+    "context_length": 32768,
+    "concurrency": 4,
+    "speculative_algorithm": "DSPARK",
+    "draft_block_size": 5,
+    "scoring": "Only final content; no-final or length-limited answers are incorrect; same extraction rules on both arms",
+    "selection": "MMLU stratified across14 domains; GPQA uniform30; GSM uniform30 excluding84 previously used test IDs",
+    "qualification": "Small generative paired subsets, not full benchmark or loglikelihood leaderboard scores"
+  },
+  "benchmarks": {
+    "mmlu_pro": {
+      "n": 30,
+      "baseline": {
+        "correct": 26,
+        "accuracy": 0.8666666666666667,
+        "budget_hits": 0,
+        "no_final": 0,
+        "format_errors": 0
+      },
+      "attn-r3-s45": {
+        "correct": 26,
+        "accuracy": 0.8666666666666667,
+        "budget_hits": 0,
+        "no_final": 0,
+        "format_errors": 0
+      },
+      "paired": {
+        "both_correct": 25,
+        "baseline_only_correct": 1,
+        "edited_only_correct": 1,
+        "both_incorrect": 3
+      }
+    },
+    "gpqa_diamond": {
+      "n": 30,
+      "baseline": {
+        "correct": 24,
+        "accuracy": 0.8,
+        "budget_hits": 5,
+        "no_final": 5,
+        "format_errors": 0
+      },
+      "attn-r3-s45": {
+        "correct": 24,
+        "accuracy": 0.8,
+        "budget_hits": 5,
+        "no_final": 5,
+        "format_errors": 0
+      },
+      "paired": {
+        "both_correct": 23,
+        "baseline_only_correct": 1,
+        "edited_only_correct": 1,
+        "both_incorrect": 5
+      }
+    },
+    "gsm8k_flexible": {
+      "n": 30,
+      "baseline": {
+        "correct": 30,
+        "accuracy": 1.0,
+        "budget_hits": 0,
+        "no_final": 0,
+        "format_errors": 0
+      },
+      "attn-r3-s45": {
+        "correct": 30,
+        "accuracy": 1.0,
+        "budget_hits": 0,
+        "no_final": 0,
+        "format_errors": 0
+      },
+      "paired": {
+        "both_correct": 30,
+        "baseline_only_correct": 0,
+        "edited_only_correct": 0,
+        "both_incorrect": 0
+      }
+    }
+  }
+}

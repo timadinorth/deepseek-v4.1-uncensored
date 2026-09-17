@@ -1,0 +1,11 @@
+.env
+.env.*
+.state/
+.venv/
+__pycache__/
+*.pyc
+*.log
+*.private.*
+.DS_Store
+models/
+output/

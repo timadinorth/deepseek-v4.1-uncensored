@@ -1,0 +1,4 @@
+# The pinned SGLang image in README already includes these dependencies.
+torch>=2.8
+safetensors>=0.8
+huggingface_hub>=0.34
